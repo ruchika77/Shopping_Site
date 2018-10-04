@@ -46,9 +46,9 @@ exports.config = {
             SENT_MSG: 'Your e-mail has been sent successfully'
         },
         REGISTRATION_PAGE: {
-            EMAIL: 'ruchika.m783473847@gmail.com',
+            EMAIL: 'a@b.com',
             FIRST_NAME: 'Cristal',
-            LAST_NAME: 'PALA',
+            LAST_NAME: 'Pala',
             PASSWORD: 'Qwerty@123',
             ADDRESS: ' 411, New Town',
             CITY: 'LONDON',
@@ -62,7 +62,14 @@ exports.config = {
         },
         COUNTRY: {
             A: 'United States'
+        },
+        ORDER_REFERENCE: {
+            NO: '456123'
+        },
+        MSG: {
+            TEXT: 'I like my order. Thank you :)'
         }
 
     }
 };
+

@@ -33,13 +33,19 @@ describe('Verify the home page', function () {
         browser.sleep(500);
     })
 
-    /* it('should click on Twitter button', function () {
-         searchResult_page.twitterButton.click();
-         browser.sleep(3000);
-         expect(browser.params.url.TWITTERURL).toContain('twitter')
-         browser.sleep(3000);
-         browser.switchTo().element(by.id('send_friend_form')).getWebElement();
-     })*/
+    it('should click on Twitter button', function () {
+        searchResult_page.twitterButton.click();
+        browser.sleep(3000);
+        browser.driver.wait(function () {
+            return browser.getAllWindowHandles().then((handles) => {
+                browser.switchTo().window(handles[1])
+                expect(browser.getCurrentUrl()).toContain('twitter')
+                browser.close()
+                browser.switchTo().window(handles[0])
+                return true
+            })
+        });
+    })
 
     it('should click on send to friend', function () {
         searchResult_page.sendToFriend.click();
@@ -55,10 +61,6 @@ describe('Verify the home page', function () {
         searchResult_page.okButton.click()
         browser.sleep(1000)
     })
-
-
-
-
 });
 
 

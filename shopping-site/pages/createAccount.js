@@ -16,6 +16,9 @@ var create_Account = function () {
     this.country = element(by.id('id_country'))
     this.mobileNo = element(by.id('phone_mobile'))
     this.registerButton = element(by.id('submitAccount'))
+    this.signInEmail = element(by.id('email'))
+    this.signInPassword = element(by.id('passwd'))
+    this.signinBtn = element(by.id('SubmitLogin')) // sign-in page
 
 
     this.selectState = function (item) {
