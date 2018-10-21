@@ -2,9 +2,19 @@ browser.ignoreSynchronisation = true;
 browser.waitForAngularEnabled(false);
 
 var create_Account = function () {
+    const members = [
+        // you can access following keys in the object as
+        // new createAccount().signInButton
+        { key: 'signInButton', selector: '.login' },
+        { key: 'emailAddress', selector: '#email_create' }
+    ];
 
-    this.signInButton = element(by.className('login')) // home page sign-in button 
-    this.emailAddress = element(by.id('email_create'));
+    members.forEach(item => {
+        this[item.key] = element(by.css(item.selector));
+    });
+
+    // this.signInButton = element(by.className('login')) // home page sign-in button 
+    // this.emailAddress = element(by.id('email_create'));
     this.createButton = element(by.id('SubmitCreate'));
     this.firstName = element(by.id('customer_firstname'))
     this.lastName = element(by.id('customer_lastname'))

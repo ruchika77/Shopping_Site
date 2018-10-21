@@ -1,6 +1,7 @@
 var home_page = require('./../pages/search.js');
 var searchResult_page = require('./../pages/searchResult.js');
 
+let searchResultPage;
 
 browser.ignoreSynchronisation = true;
 browser.waitForAngularEnabled(false);
@@ -8,12 +9,15 @@ browser.waitForAngularEnabled(false);
 describe('Verify the home page', function () {
     beforeAll(function () {
         browser.get(browser.params.url.BASEURL);
+
     });
 
     it('should write a search field in search box', function () {
         home_page.enterName(browser.params.PRODUCT.EXISTING_PRODUCT);
         browser.sleep(1000);
         home_page.clickSearch();
+        // when you open the search results page
+        searchResultPage = new searchResult_page();
     })
 
     it('should hover on the first item and select it', function () {

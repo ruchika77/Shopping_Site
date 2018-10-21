@@ -33,4 +33,4 @@ var seachResult_page = function () {
 
 };
 
-module.exports = new seachResult_page();
+module.exports = seachResult_page;

@@ -3,13 +3,14 @@ var create_Account = require('./../pages/createAccount.js');
 browser.ignoreSynchronisation = true;
 browser.waitForAngularEnabled(false);
 
-fdescribe('it should open shopping site page', function () {
+fdescribe('createAccount', function () {
     beforeAll(function () {
         browser.get(browser.params.url.BASEURL)
     })
 
-    it('should click on Sign-in from home page', function(){
-        create_Account.signInButton.click()
+    it('should click on Sign-in from home page', function(done){
+        create_Account.signInButton.click();
+        done();
     })
 
     it('should enter details for registration page', function(){

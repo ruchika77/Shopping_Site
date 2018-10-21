@@ -13,7 +13,7 @@ exports.config = {
 
     // Spec patterns are relative to the current working directly when
     // protractor is called.
-    specs: ['./spec/*.spec.js'],
+    specs: ['./spec/createAccount.spec.js'],
 
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {
@@ -46,7 +46,7 @@ exports.config = {
             SENT_MSG: 'Your e-mail has been sent successfully'
         },
         REGISTRATION_PAGE: {
-            EMAIL: 'a@b.com',
+            EMAIL: 'asda1@asda.com',
             FIRST_NAME: 'Cristal',
             LAST_NAME: 'Pala',
             PASSWORD: 'Qwerty@123',
