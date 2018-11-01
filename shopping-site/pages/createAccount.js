@@ -13,8 +13,8 @@ var create_Account = function () {
         this[item.key] = element(by.css(item.selector));
     });
 
-    // this.signInButton = element(by.className('login')) // home page sign-in button 
-    // this.emailAddress = element(by.id('email_create'));
+    this.signInButton = element(by.className('login')) // home page sign-in button 
+    this.emailAddress = element(by.id('email_create'));
     this.createButton = element(by.id('SubmitCreate'));
     this.firstName = element(by.id('customer_firstname'))
     this.lastName = element(by.id('customer_lastname'))
