@@ -1,5 +1,6 @@
 // get a reference to Class
 const RegisterPage = require('./RegisterPage');
+const signInPage = require('./signInPage')
 
 const sampleData = {
   // key & value
@@ -20,12 +21,12 @@ fdescribe('Register Page >>', () => {
   beforeAll(function () {
     browser.get(browser.params.url.BASEURL)
     let registerPage = new RegisterPage();
-})
+  })
 
   it('should enter details in registration form', () => {
-   /* for(let value in sampleData){
-      registerPage[key].sendKeys(sampleData.value)
-    }*/
+    /* for(let value in sampleData){
+       registerPage[key].sendKeys(sampleData.value)
+     }*/
     create_Account.signInButton.click();
     create_Account.emailAddress.sendKeys(browser.params.REGISTRATION_PAGE.EMAIL)
     create_Account.createButton.click()

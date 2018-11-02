@@ -3,9 +3,9 @@ const Page = require('../../core/Page');
 const registerPageProperties = {
   // key & selector
   // following belongs to sigin page
-  signInButton: '.login',
-  emailAddress: '#email_create',
-  createButton: '#SubmitCreate',
+  // signInButton: '.login',
+  // emailAddress: '#email_create',
+  // createButton: '#SubmitCreate',
 
   // following belongs to register page
   firstName: '#customer_firstname',
