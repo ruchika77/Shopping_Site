@@ -1,37 +1,20 @@
 const Page = require('../../core/Page');
-
-const registerPageProperties = {
-  // key & selector
-  // following belongs to sigin page
-  // signInButton: '.login',
-  // emailAddress: '#email_create',
-  // createButton: '#SubmitCreate',
-
-  // following belongs to register page
-  firstName: '#customer_firstname',
-  lastName: '#customer_lastname',
-  password: '#passwd',
-  address: '#address1',
-  city: 'city',
-  state: 'id_state',
-  zipCode: 'postcode',
-  country: 'id_country',
-  mobileNo: 'phone_mobile',
-  registerButton: 'submitAccount',
-  signInEmail: 'email',
-  signInPassword: 'passwd',
-  signInBtn: 'SubmitLogin'
-};
+const registerPageSelectors = require('./registerPageSelectors');
 
 class RegisterPage extends Page {
 
   constructor() {
-    super(registerPageProperties);
+    super(registerPageSelectors);
   }
 
-  selectState(item) {
-    this.selectState.click();
-    this.state.element(By.cssContainingText('option', item)).click();
+  async selectState(item) {
+    console.log('selectState>>>');
+    this.state.element(by.css('option[value="1"]')).getText().then(a => {
+      console.log('a >>>', a);
+    });
+    const text = await element(By.cssContainingText('#id_state > option', item)).getText();
+    console.log('text>>>', text);
+    await this.state.all(By.cssContainingText('option', item)).click();
   }
 
   selectCountry(item) {
